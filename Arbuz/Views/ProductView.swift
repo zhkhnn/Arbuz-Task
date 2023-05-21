@@ -11,13 +11,8 @@ import SwiftUI
       @State var product: Product
       @State private var count = 1
       @State private var showAlert = false
-        @Environment(\.presentationMode) var presentationMode
-        @EnvironmentObject var cartManager: CartManager
-
-      
-
-          
-      
+      @Environment(\.presentationMode) var presentationMode
+      @EnvironmentObject var cartManager: CartManager
       private var canIncrementCount: Bool {
         return product.instock
       }
@@ -80,11 +75,8 @@ import SwiftUI
               Spacer()
               Button(action: {
                   cartManager.addToCart(product: product)
-    //                      updatedPrice += totalPrice
                   product.isSelected = true
                       presentationMode.wrappedValue.dismiss()
-                  
-
               }) {
 
                   Text("Add to the basket")
