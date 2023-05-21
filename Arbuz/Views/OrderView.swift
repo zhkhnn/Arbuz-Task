@@ -14,7 +14,6 @@ extension String{
 }
 
 struct OrderView: View {
-//    @State var basket: Basket
     @State private var information = Information(
             deliveryDate: Date(),
             deliveryTime: Date(),
